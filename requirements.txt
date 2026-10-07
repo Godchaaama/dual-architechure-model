@@ -1,0 +1,10 @@
+numpy
+torch
+torchvision
+Pillow
+transformers
+matplotlib
+tqdm
+ipython
+psutil
+faiss-gpu-cu12
