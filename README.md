@@ -4,7 +4,7 @@ This repository trains a composed image retrieval model on Fashion-IQ. A query i
 
 The model uses SigLIP-SO400M (vision and text) together with ResNet-50 low-level features, a visual token compressor, a target aggregator, composition fusion, and a query residual. Training uses category-aware hard-negative mining and reports Recall@10 and Recall@50.
 
-Run the training script as `cir_63.py` or the notebook `main.ipynb`. Both expect a CUDA GPU. `cir_63.py` uses Colab-style `!` shell lines, so the notebook is the practical way to run it.
+Run the notebook `main.ipynb`. It expects a CUDA GPU.
 
 ## Install
 
@@ -73,7 +73,7 @@ Caption files are a list of triplets:
 
 Training captions are randomly reordered and joined. Validation captions stay fixed as `"caption0. caption1"`.
 
-## Output of `cir_63.py`
+## Output of `main.ipynb`
 
 While training, the script prints the resolved config, a parameter summary, per-epoch loss (total, contrastive, triplet), and evaluation metrics every `eval_every` epochs (default 2) plus the last epoch. Metrics are per category and averaged:
 
